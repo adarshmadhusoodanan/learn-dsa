@@ -282,8 +282,20 @@ def pattern16(n):
                      ABCBA
                     ABCDCBA
         '''
-
+def pattern17(n):
+    for i in range(n+1):
+        for j in range(i-1, -1,-1):
+            print(chr(69-j),end="")
+        print()
+        '''
+        pattern:
+                    E
+                    DE
+                    CDE
+                    BCDE
+                    ABCDE
+        '''
 if __name__ == "__main__":
     n = int(input("Enter a number: "))
-    pattern16(n)
+    pattern17(n)
 
