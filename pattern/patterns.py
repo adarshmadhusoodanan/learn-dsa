@@ -77,9 +77,21 @@ def pattern5(n):
                 *
         '''
 
-
+def pattern6(n):
+    for i in range(n):
+        for j in range(1,n-i+1):
+            print(f"{j}",end="")
+        print()
+        '''
+        pattern:
+                12345
+                1234
+                123
+                12
+                1
+        '''
 
 if __name__ == "__main__":
     n = int(input("Enter a number: "))
-    pattern5(n)
+    pattern6(n)
 
