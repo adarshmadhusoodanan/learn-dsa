@@ -230,8 +230,60 @@ def pattern13(n):
                 ABCD
                 ABCDE
         '''
+def pattern14(n):
+    for i in range(1,n+1):
+        for j in range(n-i+1):
+            print(chr(65+j),end="")
+        print()
+        '''
+        pattern:
+                ABCDE
+                ABCD
+                ABC
+                AB
+                A
+        '''
+def pattern15(n):
+    for i in range(1,n+1):
+        for j in range(i):
+            print(chr(64+i),end="")
+        print()
+        '''
+        pattern:
+                A
+                BB
+                CCC
+                DDDD
+                EEEEE
+        '''
+def pattern16(n):
+    for i in range(n):
+        #space
+        for j in range(n-i-1):
+            print(" ", end="")
+
+        #characters
+        # print the first part (increasing order)
+        for j in range(i):
+            print(chr(65 + j), end="")
+        
+        # print the second part (decreasing order)
+        for j in range(i-2, -1, -1):
+            print(chr(65 + j), end="")
+
+        #space
+        for j in range(n-i-1):
+            print(" ", end="")
+        print()
+        '''
+        pattern:
+                       A
+                      ABA
+                     ABCBA
+                    ABCDCBA
+        '''
 
 if __name__ == "__main__":
     n = int(input("Enter a number: "))
-    pattern13(n)
+    pattern16(n)
 
