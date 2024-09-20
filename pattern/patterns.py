@@ -91,7 +91,92 @@ def pattern6(n):
                 1
         '''
 
+def pattern7(n):
+    for i in range(n):
+        #space
+        for j in range(n-i-1):
+            print(" ", end="")     
+        #star
+        for j in range(2*i+1):
+            print("*",end="")
+        #space
+        for j in range(n-i-1):
+            print(" ", end="")
+        print()
+        '''
+        pattern:
+                        *
+                       ***
+                      *****
+                     *******
+                    *********
+        '''
+
+def pattern8(n):
+    for i in range(n):
+        #space
+        for j in range(i):
+            print(" ", end="")     
+        #star
+        for j in range(2*n-(2*i+1)):
+            print("*",end="")
+        #space
+        for j in range(i):
+            print(" ", end="")
+        print()
+        '''
+        pattern:
+                    *********
+                     *******
+                      *****
+                       ***
+                        *
+        '''
+
+def pattern9(n):   
+    for i in range(2*n): #0 to 9
+        star=i
+        if (i>n):      # after the 5 th row
+            star=2*n-i    #reduce the star
+        for j in range(star):
+            print("*",end="")
+        print()
+
+        '''
+        pattern:
+                    *
+                    **
+                    ***
+                    ****
+                    *****
+                    ****
+                    ***
+                    **
+                    *
+        '''
+
+def pattern10(n):
+    star=1
+    for i in range(n+1):
+        
+        if (i%2==0):
+            star=0
+        else:
+            star=1
+        for j in range(i):
+            print(f"{star}",end="")
+            star=1-star
+        print()
+        '''
+        pattern:
+                1
+                01
+                101
+                0101
+                10101
+        '''
+
 if __name__ == "__main__":
     n = int(input("Enter a number: "))
-    pattern6(n)
+    pattern10(n)
 
