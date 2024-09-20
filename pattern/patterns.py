@@ -217,8 +217,21 @@ def pattern12(n):
                 11 12 13 14 15
         '''
 
+def pattern13(n):
+    for i in range(1,n+1):
+        for j in range(i):
+            print(chr(65+j),end="")
+        print()
+        '''
+        pattern:
+                A
+                AB
+                ABC
+                ABCD
+                ABCDE
+        '''
 
 if __name__ == "__main__":
     n = int(input("Enter a number: "))
-    pattern12(n)
+    pattern13(n)
 
