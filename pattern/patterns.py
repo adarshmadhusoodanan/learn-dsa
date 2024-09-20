@@ -201,7 +201,24 @@ def pattern11(n):
                 12344321
         '''
 
+def pattern12(n):
+    num=1
+    for i in range(n):
+        for j in range(i+1):
+            print(f"{num}",end=" ")
+            num+=1
+        print()
+        '''
+        pattern:
+                1
+                2 3
+                4 5 6
+                7 8 9 10
+                11 12 13 14 15
+        '''
+
+
 if __name__ == "__main__":
     n = int(input("Enter a number: "))
-    pattern11(n)
+    pattern12(n)
 
