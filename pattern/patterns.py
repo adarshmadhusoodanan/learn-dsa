@@ -13,7 +13,7 @@ def pattern1(n):
         print()  # Moves to the next line after each row
 
         '''
-        pattern1:
+        pattern:
                     *****
                     *****
                     *****
@@ -21,9 +21,39 @@ def pattern1(n):
                     *****
         ''' 
       
+def pattern2(n):
+    for i in range(n):
+        for j in range(i+1):
+            print("*", end="")
+        print()
+        '''
+        pattern:
+                    *
+                    **
+                    ***
+                    ****
+                    *****
+        ''' 
+
+def pattern3(n):
+    for i in range(n):
+        for j in range(1,i+2):
+            print(f"{j}", end="")   
+        print()
+        '''
+        pattern:
+                1
+                12
+                123
+                1234
+                12345
+        ''' 
+
+
+
 
 
 if __name__ == "__main__":
     n = int(input("Enter a number: "))
-    pattern1(n)
+    pattern3(n)
 
