@@ -176,7 +176,32 @@ def pattern10(n):
                 10101
         '''
 
+def pattern11(n):
+    space=2*(n-1)    #initial space
+    for i in range(n):
+        #number
+        for j in range(1,i+1):
+            print(f"{j}", end="")
+
+        #space     
+        for j in range(space):
+            print(" ",end="")
+
+        #number
+        for j in range(i,0,-1):  #reverse order
+            print(f"{j}",end="")
+        
+        space-=2  #space reduce by 2
+        print()
+        '''
+        pattern:
+                1      1
+                12    21
+                123  321
+                12344321
+        '''
+
 if __name__ == "__main__":
     n = int(input("Enter a number: "))
-    pattern10(n)
+    pattern11(n)
 
