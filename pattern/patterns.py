@@ -295,7 +295,58 @@ def pattern17(n):
                     BCDE
                     ABCDE
         '''
+def pattern18(n):
+    inis=0
+    for i in range(n):   
+        #star
+        for j in range(n-i):
+            print("*",end="")
+
+        #space
+        for j in range(inis):
+            print(" ",end="")
+
+        #star
+        for j in range(n-i):
+            print("*",end="")
+
+        inis+=2
+        print() 
+
+    inis=2*(n-1)
+    for i in range(n):   
+        #star
+        for j in range(i+1):
+            print("*",end="")
+
+        #space
+        for j in range(inis):
+            print(" ",end="")
+
+        #star
+        for j in range(i+1):
+            print("*",end="")
+
+        inis-=2
+        print()    
+        
+        '''
+        pattern:
+                **********
+                ****  ****
+                ***    ***
+                **      **
+                *        *
+                *        *
+                **      **
+                ***    ***
+                ****  ****
+                **********
+        '''
+
+def pattern19(n):
+    
 if __name__ == "__main__":
     n = int(input("Enter a number: "))
-    pattern17(n)
+    pattern19(n)
 
