@@ -345,8 +345,84 @@ def pattern18(n):
         '''
 
 def pattern19(n):
-    
+    space=2*n
+    for i in range(2*n):
+        star=i
+        if (i>n):
+            star=2*n-i
+
+        #star
+        for j in range(star):
+            print("*",end="")
+
+        #space
+        for j in range(space):
+            print(" ",end="")
+
+        #star
+        for j in range(star):
+            print("*",end="")
+
+        if(i<n):
+            space-=2
+        else:
+            space+=2
+        print()
+
+        '''
+        pattern
+                    *        *
+                    **      **
+                    ***    ***
+                    ****  ****
+                    **********
+                    ****  ****
+                    ***    ***
+                    **      **
+                    *        *
+
+        '''
+def pattern20(n):
+    for i in range(n):
+        for j in range(n):
+            if(i==0 or i==n-1 or j==0 or j==n-1):
+                print("*",end="")
+            else:
+                print(" ",end="")
+        print()
+        '''
+        pattern
+                *****
+                *   *
+                *   *
+                *   *
+                *****
+
+        '''
+        
+def pattern21(n):
+    for i in range(2*n-1):
+        for j in range(2*n-1):
+            top=i
+            left=j
+            right=(2*n-2)-j
+            bottom=(2*n-2)-i
+            d=min(min(top,bottom),min(left,right))
+            print(f"{n-d}",end="")
+        print()
+        '''
+        pattern
+                4444444
+                4333334
+                4322234
+                4321234
+                4322234
+                4333334
+                4444444
+
+        '''
+
 if __name__ == "__main__":
     n = int(input("Enter a number: "))
-    pattern19(n)
+    pattern21(n)
 
